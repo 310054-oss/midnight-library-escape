@@ -54,7 +54,7 @@
    if(object==='towerDoor')door('2751',titles.towerDoor);
  }
  function restart(){state.chapter=1;state.clues.clear();state.solved=false;state.started=true;closeModal(false);intro.classList.add('hide');game.classList.remove('hide');$('#library-panel').classList.remove('hide');$('#observatory-panel').classList.add('hide');$('#clocktower-panel').classList.add('hide');$('.chapter b').textContent='01 / 03';$('#brand-chapter').textContent='NIGHTFALL ESCAPE · CHAPTER 01';$('.brand-name').textContent='午夜圖書室';$('#toast').textContent='';setProgress();$('#library-panel').querySelector('[data-object]')?.focus();}
- $('#start').addEventListener('click',()=>{state.started=true;intro.classList.add('hide');game.classList.remove('hide');$('#toast').textContent='微弱的燈光亮起。先調查書架和掛畫。'});
+ $('#start').addEventListener('click',()=>{state.started=true;intro.classList.add('hide');game.classList.remove('hide');$('#library-panel').querySelector('[data-object]')?.focus();$('#toast').textContent='微弱的燈光亮起。先調查書架和掛畫。'});
  $('#sound-toggle').addEventListener('click',()=>{state.sound=!state.sound;const label=state.sound?'音效：開':'音效：關';$('#sound-toggle').textContent=(state.sound?'♫ ':'♪ ')+label;$('#sound-toggle').setAttribute('aria-label',state.sound?'音效已開啟':'音效已關閉');$('#sound-toggle').setAttribute('aria-pressed',String(state.sound));$('#toast').textContent=state.sound?'通關音效已開啟。':'通關音效已關閉。';});
  $('#restart').addEventListener('click',()=>{restart();$('#toast').textContent='房間恢復原樣，再找一次線索吧。';});
  document.querySelectorAll('[data-object]').forEach(b=>b.addEventListener('click',()=>inspect(b.dataset.object)));
