@@ -25,6 +25,10 @@
 - 互動物件使用至少 44px 的可點擊目標，房間舞台以有標籤的 `role="group"` 包含多個按鈕，避免把可操作子元素藏在純圖片語意下。適用於同時有點擊熱區與螢幕閱讀器使用者的探索畫面。
 - GitHub connector 的 OAuth 連線不會自動登入瀏覽器，也不一定提供建立 repository 的操作。先檢查 connector 的實際操作與瀏覽器登入狀態；需要登入時讓使用者自行完成，不要自動化登入表單。適用於透過 connector 與瀏覽器混合完成 GitHub 發布的任務。
 - 若 GitHub connector 有內容/commit API 但沒有 `git push` 或 repository 建立操作，可用瀏覽器建立空 repository，再透過 Git Database API（blob、tree、commit、ref）把本機最新樹寫入 `main`。這會保留初始化 commit，但不會自動搬移本機完整 commit 歷史；適用於仍需上傳完整版本且本機 Git 認證無法使用的情況。
+- Actions 的 Pages workflow 顯示成功，仍需另外打開預期的 `owner.github.io/repository/` hosted URL 確認頁面實際載入；接著用瀏覽器逐章操作線索、門鎖與結局，才可把 hosted smoke test 記為完成。適用於純靜態 GitHub Pages 專案的發布驗收。
+- 小型線性解謎的 hosted 端到端驗證可記錄每章線索如何組合成密碼、章節切換是否保留歷史筆記，以及最終結局是否到達；這能比單看 HTTP 或 workflow 成功提供更強的玩家流程證據。適用於無後端、跨章節共享狀態的瀏覽器遊戲。
+- 桌面瀏覽器能通關不代表手機觸控與窄螢幕已驗證。路線圖應將真機版面/觸控檢查和真實玩家理解度回饋分開追蹤，並保留未完成狀態直到取得實際裝置或玩家證據。適用於響應式互動網站與遊戲發布。
+
 ## 之後每個階段
 
 - 做完功能後記下可重用的設計決定、踩坑、適用範圍。
