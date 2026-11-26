@@ -8,7 +8,7 @@
 
 - 三章遊戲與知識文件已上傳至公開 repository `310054-oss/midnight-library-escape` 的 `main` 分支。
 - GitHub Actions workflow 已成功部署 `site/`，公開頁面可載入；已在瀏覽器完成三章端到端通關。
-- 手機操作與真實玩家回饋尚未驗證。
+- 桌面瀏覽器的 390px 與 320px 窄視窗模擬已檢視三章版面並操作線索及密碼鎖；尚未使用手機真機，也尚未收集玩家回饋。
 
 ## 已完成
 
@@ -27,8 +27,11 @@
 - [x] 上傳目前版本與 knowledge 文件到 `main`。
 - [x] 確認 GitHub Actions Pages 部署成功。
 - [x] 記錄公開網址，並在 hosted site 完成三章遊玩流程：<https://310054-oss.github.io/midnight-library-escape/>。
-- [ ] 在手機真機確認操作與版面，收集至少一位玩家的遊玩回饋。
+- [x] 在桌面瀏覽器以 390px、320px 視窗檢查三章窄版面與線索/密碼鎖操作。
+- [ ] 在手機真機檢查觸控、版面與鍵盤行為。
+- [ ] 收集至少一位玩家的遊玩回饋，記錄卡關點與線索理解度。
 
 ## 完成條件
 
-三間房間可在桌面與手機瀏覽器依序遊玩，所有線索與密碼有效；公開 GitHub repository 有完整程式與知識文件；GitHub Actions 自動發布 GitHub Pages 且 hosted site 完成基本通關驗證。桌面 hosted site 通關已驗證；手機真機與外部玩家回饋仍待完成。
+三間房間可在桌面與手機瀏覽器依序遊玩，所有線索與密碼有效；公開 GitHub repository 有完整程式與知識文件；GitHub Actions 自動發布 GitHub Pages 且 hosted site 完成基本通關驗證。桌面 hosted site 通關與窄視窗模擬已驗證；手機真機及外部玩家回饋仍待完成。
+
